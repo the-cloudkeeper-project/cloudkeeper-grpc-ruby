@@ -45,21 +45,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "cloudkeeper_grpc.ImageListIdentifier" do
     optional :image_list_identifier, :string, 1
   end
-  add_message "cloudkeeper_grpc.Status" do
-    optional :code, :enum, 1, "cloudkeeper_grpc.Status.Code"
-    optional :message, :string, 2
-  end
-  add_enum "cloudkeeper_grpc.Status.Code" do
-    value :SUCCESS, 0
-    value :ERROR, 1
-    value :ERROR_APPLIANCE_NOT_FOUND, 2
-    value :ERROR_APPLIANCE_TRANSFER, 3
-    value :ERROR_AUTHENTICATION, 4
-    value :ERROR_USER_NOT_AUTHORIZED, 5
-    value :ERROR_RESOURCE_NOT_FOUND, 6
-    value :ERROR_RESOURCE_RETRIEVAL, 7
-    value :ERROR_RESOURCE_STATE, 8
-  end
 end
 
 module CloudkeeperGrpc
@@ -68,6 +53,4 @@ module CloudkeeperGrpc
   Image::Mode = Google::Protobuf::DescriptorPool.generated_pool.lookup("cloudkeeper_grpc.Image.Mode").enummodule
   Image::Format = Google::Protobuf::DescriptorPool.generated_pool.lookup("cloudkeeper_grpc.Image.Format").enummodule
   ImageListIdentifier = Google::Protobuf::DescriptorPool.generated_pool.lookup("cloudkeeper_grpc.ImageListIdentifier").msgclass
-  Status = Google::Protobuf::DescriptorPool.generated_pool.lookup("cloudkeeper_grpc.Status").msgclass
-  Status::Code = Google::Protobuf::DescriptorPool.generated_pool.lookup("cloudkeeper_grpc.Status.Code").enummodule
 end
