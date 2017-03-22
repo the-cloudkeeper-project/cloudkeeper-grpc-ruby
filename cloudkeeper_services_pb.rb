@@ -14,12 +14,12 @@ module CloudkeeperGrpc
       self.unmarshal_class_method = :decode
       self.service_name = 'cloudkeeper_grpc.Communicator'
 
-      rpc :PreAction, Google::Protobuf::Empty, Status
-      rpc :PostAction, Google::Protobuf::Empty, Status
-      rpc :AddAppliance, Appliance, Status
-      rpc :UpdateAppliance, Appliance, Status
-      rpc :RemoveAppliance, Appliance, Status
-      rpc :RemoveImageList, ImageListIdentifier, Status
+      rpc :PreAction, Google::Protobuf::Empty, Google::Protobuf::Empty
+      rpc :PostAction, Google::Protobuf::Empty, Google::Protobuf::Empty
+      rpc :AddAppliance, Appliance, Google::Protobuf::Empty
+      rpc :UpdateAppliance, Appliance, Google::Protobuf::Empty
+      rpc :RemoveAppliance, Appliance, Google::Protobuf::Empty
+      rpc :RemoveImageList, ImageListIdentifier, Google::Protobuf::Empty
       rpc :ImageLists, Google::Protobuf::Empty, stream(ImageListIdentifier)
       rpc :Appliances, ImageListIdentifier, stream(Appliance)
     end
