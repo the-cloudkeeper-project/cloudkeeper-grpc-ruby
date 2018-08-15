@@ -1,6 +1,6 @@
 [submodule "protos"]
 	path = protos
 	url = https://github.com/the-cloudkeeper-project/cloudkeeper-proto.git
-[submodule "metadata"]
-	path = metadata
-	url = https://github.com/the-cloudkeeper-project/cloudkeeper-metadata.git
+[submodule "status-codes"]
+	path = status-codes
+	url = https://github.com/the-cloudkeeper-project/cloudkeeper-status-codes.git

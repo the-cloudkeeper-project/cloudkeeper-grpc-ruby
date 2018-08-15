@@ -19,8 +19,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :vo, :string, 11
     optional :expiration_date, :int64, 12
     optional :image_list_identifier, :string, 13
-    optional :image, :message, 14, "cloudkeeper_grpc.Image"
-    map :attributes, :string, :string, 15
+    optional :base_mpuri, :string, 14
+    optional :appid, :string, 15
+    optional :digest, :string, 16
+    optional :image, :message, 17, "cloudkeeper_grpc.Image"
   end
   add_message "cloudkeeper_grpc.Image" do
     optional :mode, :enum, 1, "cloudkeeper_grpc.Image.Mode"
@@ -31,6 +33,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :size, :int64, 6
     optional :username, :string, 7
     optional :password, :string, 8
+    optional :digest, :string, 9
   end
   add_enum "cloudkeeper_grpc.Image.Mode" do
     value :LOCAL, 0
