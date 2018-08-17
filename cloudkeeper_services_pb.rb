@@ -18,6 +18,7 @@ module CloudkeeperGrpc
       rpc :PostAction, Google::Protobuf::Empty, Google::Protobuf::Empty
       rpc :AddAppliance, Appliance, Google::Protobuf::Empty
       rpc :UpdateAppliance, Appliance, Google::Protobuf::Empty
+      rpc :UpdateApplianceMetadata, Appliance, Google::Protobuf::Empty
       rpc :RemoveAppliance, Appliance, Google::Protobuf::Empty
       rpc :RemoveImageList, ImageListIdentifier, Google::Protobuf::Empty
       rpc :ImageLists, Google::Protobuf::Empty, stream(ImageListIdentifier)
