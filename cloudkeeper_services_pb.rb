@@ -23,6 +23,7 @@ module CloudkeeperGrpc
       rpc :RemoveImageList, ImageListIdentifier, Google::Protobuf::Empty
       rpc :ImageLists, Google::Protobuf::Empty, stream(ImageListIdentifier)
       rpc :Appliances, ImageListIdentifier, stream(Appliance)
+      rpc :RemoveExpiredAppliances, Google::Protobuf::Empty, Google::Protobuf::Empty
     end
 
     Stub = Service.rpc_stub_class
